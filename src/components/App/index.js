@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Flex } from 'react-flex';
+import Media from 'react-media';
 import 'react-flex/index.css';
 import Header from '../Header';
 import Projects from '../Projects';
@@ -9,7 +10,9 @@ class App extends Component {
 		return (
 			<Flex style={style.appFrame}>
 				<Header/>
-				<Projects/>
+				<Media query="(max-width: 1023px)">
+					{matches => matches ? null : <Projects/>}
+				</Media>
 			</Flex>
 		);
 	}

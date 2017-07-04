@@ -14,7 +14,7 @@ class Projects extends Component {
 					<Project
 						leftAlign={true}
 						title="rev RE"
-						description="flksdjflkjdskfjldsjflksdjf"
+						description="Flamingle was a commercial dating app that utilized GPS and Google Maps to create a unique dating experience. Tragically the company that owns it has taken the backend down and it no longer properly functions. Flamingle used FireBase as the backend and Google Places to get information about the surrounding locations."
 						image1="http://i.imgur.com/fywwpcC.png"
 						image2="http://i.imgur.com/rQTgBZu.png"
 						image3="http://i.imgur.com/JcWyHeV.png"

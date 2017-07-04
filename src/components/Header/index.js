@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Media from 'react-media';
 import { Flex } from 'react-flex';
 import $ from 'jquery';
 import Contact from '../Contact';
@@ -10,13 +11,23 @@ class Header extends Component {
 				  column={true}
 				  alignItems="center">
 				<img src="http://i.imgur.com/EXaXbBw.png" style={style.logo}/>
-				<p style={style.title}>Taylor Stubbs</p>
+				<Media query="(max-width: 1023px)">
+					{matches => matches ? (
+						<p style={style.mobileTitle}>Taylor Stubbs</p>
+					) : (
+						<p style={style.title}>Taylor Stubbs</p>
+					)}
+				</Media>
 				<Flex style={style.contactFrame}>
 					<Contact/>
 				</Flex>
-				<Flex style={style.scrollButtonFrame} onClick={() => this.scrollToPortfolio()} column={true}>
-					<img style={style.scrollButtonIcon} src="http://i.imgur.com/hDzFQLC.png"/>
-				</Flex>
+				<Media query="(max-width: 1023px)">
+					{matches => matches ? null : (
+						<Flex style={style.scrollButtonFrame} onClick={() => this.scrollToPortfolio()} column={true}>
+							<img style={style.scrollButtonIcon} src="http://i.imgur.com/hDzFQLC.png"/>
+						</Flex>
+					)}
+				</Media>
 			</Flex>
 		);
 	}
@@ -38,6 +49,10 @@ const style = {
 	},
 	title: {
 		fontSize: 60,
+		letterSpacing: 4
+	},
+	mobileTitle: {
+		fontSize: 32,
 		letterSpacing: 4
 	},
 	logo: {

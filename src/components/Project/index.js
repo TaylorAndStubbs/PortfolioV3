@@ -89,18 +89,18 @@ const style = {
 		paddingBottom: '6%'
 	},
 	title: {
-		fontSize: 32,
-		marginRight: '4%'
+		fontSize: 28,
+		marginRight: '2%'
 	},
 	image: {
 		width: '27%'
 	},
 	infoFrame: {
-		width: '31%',
+		width: '36%',
 		padding: '2%'
 	},
 	imageFrame: {
-		width: '61%',
+		width: '56%',
 		padding: '2%'
 	},
 	description: {
@@ -121,8 +121,8 @@ const style = {
 		marginBottom: '5%'
 	},
 	iconFrame: {
-		marginLeft: '2%',
-		marginRight: '2%'
+		marginLeft: '1%',
+		marginRight: '1%'
 	}
 };
 
