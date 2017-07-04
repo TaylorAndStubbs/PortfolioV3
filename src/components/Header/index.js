@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Flex } from 'react-flex';
+import Contact from '../Contact';
 
 class Header extends Component {
 	render() {
@@ -9,7 +10,9 @@ class Header extends Component {
 				  alignItems="center">
 				<img src="http://i.imgur.com/EXaXbBw.png" style={style.logo}/>
 				<p style={style.title}>Taylor Stubbs</p>
-				<p style={style.description}>Like a baboon strapped to a rocket</p>
+				<Flex style={style.contactFrame}>
+					<Contact/>
+				</Flex>
 			</Flex>
 		);
 	}
@@ -28,8 +31,7 @@ const style = {
 	logo: {
 		height: '50%'
 	},
-	description: {
-		fontSize: 18,
+	contactFrame: {
 		marginTop: 20
 	}
 };
