@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Flex } from 'react-flex';
+import $ from 'jquery';
 import Contact from '../Contact';
 
 class Header extends Component {
@@ -13,9 +14,18 @@ class Header extends Component {
 				<Flex style={style.contactFrame}>
 					<Contact/>
 				</Flex>
+				<Flex style={style.scrollButtonFrame} onClick={() => this.scrollToPortfolio()} column={true}>
+					<img style={style.scrollButtonIcon} src="http://i.imgur.com/hDzFQLC.png"/>
+				</Flex>
 			</Flex>
 		);
 	}
+
+	scrollToPortfolio = () => {
+		$('html, body').animate({
+			scrollTop: $("#portfolio").offset().top
+		}, 1000);
+	};
 }
 
 const style = {
@@ -35,6 +45,15 @@ const style = {
 	},
 	contactFrame: {
 		marginTop: 20
+	},
+	scrollButtonFrame: {
+		cursor: 'pointer',
+		bottom: '0',
+		position: 'absolute',
+		marginBottom: '2%'
+	},
+	scrollButtonIcon: {
+		width: '2%'
 	}
 };
 

@@ -6,6 +6,7 @@ class Projects extends Component {
 	render() {
 		return (
 			<Flex style={style.projectsFrame}
+				  id="portfolio"
 				  justifyContent="center"
 				  row={false}>
 				<p style={style.title}>Portfolio</p>
