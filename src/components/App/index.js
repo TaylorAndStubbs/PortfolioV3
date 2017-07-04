@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
+import { Flex } from 'react-flex';
+import 'react-flex/index.css';
+import Header from '../Header';
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				dksjflkasjfklsdjf
-			</div>
+			<Flex style={style.appFrame}>
+				<Header/>
+			</Flex>
 		);
 	}
 }
+
+const style = {
+	appFrame: {
+		width: '100%',
+		height: '100%',
+		position: 'absolute',
+		backgroundColor: "#FFFFFF"
+	}
+};
 
 export default App;
