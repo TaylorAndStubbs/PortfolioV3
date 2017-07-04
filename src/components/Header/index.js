@@ -11,7 +11,7 @@ class Header extends Component {
 				  column={true}
 				  alignItems="center">
 				<img src="http://i.imgur.com/EXaXbBw.png" style={style.logo}/>
-				<Media query="(max-width: 1023px)">
+				<Media query="(max-width: 799px)">
 					{matches => matches ? (
 						<p style={style.mobileTitle}>Taylor Stubbs</p>
 					) : (
@@ -21,7 +21,7 @@ class Header extends Component {
 				<Flex style={style.contactFrame}>
 					<Contact/>
 				</Flex>
-				<Media query="(max-width: 1023px)">
+				<Media query="(max-width: 799px)">
 					{matches => matches ? null : (
 						<Flex style={style.scrollButtonFrame} onClick={() => this.scrollToPortfolio()} column={true}>
 							<img style={style.scrollButtonIcon} src="http://i.imgur.com/hDzFQLC.png"/>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Flex } from 'react-flex';
+import Media from 'react-media';
 
 class Project extends Component {
 	render() {
@@ -61,7 +62,14 @@ class Project extends Component {
 		return (
 			<Flex style={style.infoFrame}>
 				<Flex row={true} alignItems="center" style={style.titleFrame}>
-					<p style={style.title}>{this.props.title}</p>
+					<Media query="(max-width: 1023px)">
+						{matches => matches ? (
+							<p style={style.netBookTitle}>{this.props.title}</p>
+						) : (
+							<p style={style.title}>{this.props.title}</p>
+						)}
+					</Media>
+
 					{this.renderGitHubLink()}
 					{this.renderAndroidLink()}
 					{this.renderWedLink()}
@@ -89,8 +97,11 @@ const style = {
 		paddingBottom: '6%'
 	},
 	title: {
-		fontSize: 28,
+		fontSize: 26,
 		marginRight: '2%'
+	},
+	netBookTitle: {
+		fontSize: 22,
 	},
 	image: {
 		width: '27%'

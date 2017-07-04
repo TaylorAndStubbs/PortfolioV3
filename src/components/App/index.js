@@ -11,7 +11,7 @@ class App extends Component {
 		return (
 			<Flex style={style.appFrame}>
 				<Header/>
-				<Media query="(max-width: 1023px)">
+				<Media query="(max-width: 799px)">
 					{matches => matches ? null : <Projects/>}
 				</Media>
 				<Footer/>
