@@ -3,6 +3,7 @@ import { Flex } from 'react-flex';
 import Media from 'react-media';
 import 'react-flex/index.css';
 import Header from '../Header';
+import Footer from '../Footer';
 import Projects from '../Projects';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
 				<Media query="(max-width: 1023px)">
 					{matches => matches ? null : <Projects/>}
 				</Media>
+				<Footer/>
 			</Flex>
 		);
 	}
