@@ -29,7 +29,7 @@ class Projects extends Component {
 					<Project
 						leftAlign={true}
 						title="NerdGolf"
-						description="Do you like disc golf? Do you like keeping score? Well buddy, I got news for you. Now you can keep track of your score on the disc golf course with this handy dandy app! What makes it different than the others? Well it’s probably simpler, also I made it so you know it’s got nothing by love flowing through its veins. But maybe you think it sucks? Well, it’s open source, so get to work!"
+						description="Do you like disc golf? Do you like keeping score? Well buddy, I got news for you. Now you can keep track of your score on the disc golf course with this handy dandy app! What makes it different than the others? Well it’s probably simpler, also I made it so you know it’s got nothing but love flowing through its veins. But maybe you think it sucks? Well, it’s open source, so get to work!"
 						image1="http://i.imgur.com/qg7rJCQ.png"
 						image2="http://i.imgur.com/bCbLJsA.png"
 						image3="http://i.imgur.com/31Vs1Sa.png"
