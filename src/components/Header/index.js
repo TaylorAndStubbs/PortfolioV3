@@ -22,7 +22,9 @@ const style = {
 	headerFrame: {
 		height: '95%',
 		width: '100%',
-		paddingTop: '5%'
+		paddingTop: '5%',
+		border: '0 solid #7f7f7f',
+		borderBottomWidth: 1
 	},
 	title: {
 		fontSize: 60,
