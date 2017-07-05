@@ -64,6 +64,7 @@ const style = {
 	scrollButtonFrame: {
 		cursor: 'pointer',
 		bottom: '0',
+		left: '0',
 		position: 'absolute',
 		marginBottom: '2%'
 	},
