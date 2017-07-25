@@ -5,22 +5,26 @@ import Media from 'react-media';
 
 class Project extends Component {
 	render() {
-		if (this.props.leftAlign) {
-			return (
-				<Flex style={style.projectFrame} row={true} alignItems="flex-start">
-					{this.renderInfo()}
-					{this.renderImages()}
-				</Flex>
-			);
-		} else {
-			return (
-				<Flex style={style.projectFrame} row={true} alignItems="flex-start">
-					{this.renderImages()}
-					{this.renderInfo()}
-				</Flex>
-			);
-		}
+		return (
+			<Flex style={style.projectFrame} row={true} alignItems="flex-start">
+				{this.renderContent()}
+			</Flex>
+		)
 	};
+
+	renderContent() {
+		if (this.props.leftAlign) {
+			return [
+				this.renderInfo(),
+				this.renderImages()
+			]
+		} else {
+			return [
+				this.renderImages(),
+				this.renderInfo()
+			]
+		}
+	}
 
 	renderGitHubLink = () => {
 		if (this.props.gitHubLink === undefined) {
@@ -82,9 +86,15 @@ class Project extends Component {
 	renderImages = () => {
 		return (
 			<Flex style={style.imageFrame} justifyContent="space-between">
-				<img src={this.props.image1} style={style.image}/>
-				<img src={this.props.image2} style={style.image}/>
-				<img src={this.props.image3} style={style.image}/>
+				<a href={this.props.image1} style={style.imageContainer}>
+					<img src={this.props.image1} style={style.image}/>
+				</a>
+				<a href={this.props.image2} style={style.imageContainer}>
+					<img src={this.props.image2} style={style.image}/>
+				</a>
+				<a href={this.props.image3} style={style.imageContainer}>
+					<img src={this.props.image3} style={style.image}/>
+				</a>
 			</Flex>
 		);
 	};
@@ -104,6 +114,9 @@ const style = {
 		fontSize: 22,
 	},
 	image: {
+		width: '100%'
+	},
+	imageContainer: {
 		width: '27%'
 	},
 	infoFrame: {

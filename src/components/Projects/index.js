@@ -12,6 +12,14 @@ class Projects extends Component {
 				<p style={style.title}>Portfolio</p>
 				<Flex column={true}>
 					<Project
+						title="maekay.com"
+						description="I built this for a couple pans of enchiladas because the client didn’t have much of a budget and I’m a nice guy like that. Site is mobile friendly with a firebase backend and handmade content management software so she can update her blog. Frontend uses Bootstrap and React. Also, she does very good work so if you’re in the market for calligraphy than check this out."
+						leftAlign={false}
+						image1="http://i.imgur.com/Rg7nOks.png"
+						image2="http://i.imgur.com/FJseXKd.png"
+						image3="http://i.imgur.com/lFRYCNU.png"
+						webLink="http://www.maekay.com/"/>
+					<Project
 						leftAlign={true}
 						title="rev RE"
 						description="An extension of the Covert Clue framework, rev RE is a scavenger hunt across the Texas Tech campus. This was my first project using React Native and, despite the many quirks of the framework, was a blast to use. Special shout out to Airbnb for creating the map component since Facebook apparently wasn’t up to the task."
@@ -53,7 +61,7 @@ class Projects extends Component {
 const style = {
 	projectsFrame: {
 		width: '100%',
-		backgroundColor: '#f2f2f2'
+		backgroundColor: '#e5e5e5'
 	},
 	title: {
 		marginTop: '2%',
